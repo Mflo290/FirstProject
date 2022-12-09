@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="420.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="flores.firstproject.ModifyPartForm">
+   <children>
+      <Label layoutX="88.0" layoutY="51.0" text="Modify Part">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="inHouseRadio" layoutX="207.0" layoutY="56.0" mnemonicParsing="false" onAction="#onModInHouse" text="In-House">
+         <toggleGroup>
+            <ToggleGroup fx:id="modGroup" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="outsourceRadio" layoutX="319.0" layoutY="56.0" mnemonicParsing="false" onAction="#onModOutsourced" text="Outsourced" toggleGroup="$modGroup" />
+      <Label layoutX="118.0" layoutY="95.0" text="ID" />
+      <Label layoutX="118.0" layoutY="140.0" text="Name" />
+      <Label layoutX="118.0" layoutY="185.0" text="Inv" />
+      <Label layoutX="118.0" layoutY="230.0" text="Price/Cost" />
+      <Label layoutX="118.0" layoutY="275.0" text="Max" />
+      <Label fx:id="modifyMachineOrCompanyLabel" layoutX="118.0" layoutY="320.0" text="Machine ID" />
+      <TextField fx:id="modifyPartId" disable="true" editable="false" layoutX="210.0" layoutY="95.0" promptText="Auto - Generate" />
+      <TextField fx:id="modifyPartName" layoutX="210.0" layoutY="140.0" />
+      <TextField fx:id="modifyPartInv" layoutX="210.0" layoutY="185.0" />
+      <TextField fx:id="modifyPartPrice" layoutX="210.0" layoutY="230.0" />
+      <TextField fx:id="modifyPartMax" layoutX="210.0" layoutY="275.0" />
+      <TextField fx:id="modifyMachineOrCompany" layoutX="210.0" layoutY="320.0" />
+      <Label layoutX="388.0" layoutY="275.0" text="Min" />
+      <TextField fx:id="modifyPartMin" layoutX="424.0" layoutY="275.0" />
+      <Button layoutX="274.0" layoutY="360.0" mnemonicParsing="false" onAction="#onModSaveButton" text="Save">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button layoutX="350.0" layoutY="360.0" mnemonicParsing="false" onAction="#onModCancelButton" text="Cancel">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+   </children>
+</AnchorPane>
